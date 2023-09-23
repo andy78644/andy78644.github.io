@@ -18,18 +18,22 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="這系列將會介紹不同 zk 在區塊鏈上的應用，除了幾種有名的 zk 應用之外也會介紹在各地 hackthon 所得獎的作品，將會從作品的介紹,程式碼以及該產品可能產生的問題去進行分析 IntroduceCryptoBureau">
+        <meta name="description" content="這系列將會介紹不同 zk 在區塊鏈上的應用，除了幾種有名的 zk 應用之外也會介紹在各地 hackthon 所得獎的作品，將會從作品的介紹,程式碼以及該產品可能產生的問題去進行分析 Introduce在目前 web3 的借貸平台中，大部分借貸的方式為超額抵押，超額抵押就是抵押品的價值要超過借出的金額，在 web3 中當抵押品的價值低於某個與借出金額相關的比例後就會將抵押品拍賣掉以避免借貸平台的損失">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zk-application(2) - CryptoBureau">
 <meta property="og:url" content="https://andy78644.com/2023/09/22/zk-application2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="這系列將會介紹不同 zk 在區塊鏈上的應用，除了幾種有名的 zk 應用之外也會介紹在各地 hackthon 所得獎的作品，將會從作品的介紹,程式碼以及該產品可能產生的問題去進行分析 IntroduceCryptoBureau">
+<meta property="og:description" content="這系列將會介紹不同 zk 在區塊鏈上的應用，除了幾種有名的 zk 應用之外也會介紹在各地 hackthon 所得獎的作品，將會從作品的介紹,程式碼以及該產品可能產生的問題去進行分析 Introduce在目前 web3 的借貸平台中，大部分借貸的方式為超額抵押，超額抵押就是抵押品的價值要超過借出的金額，在 web3 中當抵押品的價值低於某個與借出金額相關的比例後就會將抵押品拍賣掉以避免借貸平台的損失">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://andy78644.com/images/CryptoBureau.png">
 <meta property="article:published_time" content="2023-09-21T17:08:02.000Z">
-<meta property="article:modified_time" content="2023-09-21T17:10:06.631Z">
+<meta property="article:modified_time" content="2023-09-23T17:11:35.495Z">
 <meta property="article:author" content="Andy Lin">
-<meta property="article:tag" content="blockchain zero-knowledge">
+<meta property="article:tag" content="blockchain">
+<meta property="article:tag" content="zero-knowledge">
+<meta property="article:tag" content="lending protocol">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://andy78644.com/images/CryptoBureau.png">
     
     
     <!--- Icon Part-->
@@ -304,8 +308,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-09-22 01:10:06</span>
-            <span class="mobile">2023-09-22 01:10:06</span>
+            <span class="desktop">2023-09-24 01:11:35</span>
+            <span class="mobile">2023-09-24 01:11:35</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -317,7 +321,15 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/blockchain-zero-knowledge/">blockchain zero-knowledge</a>&nbsp;
+                        <a href="/tags/blockchain/">blockchain</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/zero-knowledge/">zero-knowledge</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/lending-protocol/">lending protocol</a>&nbsp;
                     </li>
                 
             </ul>
@@ -344,7 +356,21 @@
 
         <div class="article-content markdown-body">
             <p>這系列將會介紹不同 zk 在區塊鏈上的應用，除了幾種有名的 zk 應用之外也會介紹在各地 hackthon 所得獎的作品，將會從作品的介紹,程式碼以及該產品可能產生的問題去進行分析</p>
-<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p><a class="link"   target="_blank" rel="noopener" href="https://ethglobal.com/showcase/cryptobureau-u1389" >CryptoBureau <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Introduce"><a href="#Introduce" class="headerlink" title="Introduce"></a>Introduce</h2><p>在目前 web3 的借貸平台中，大部分借貸的方式為超額抵押，超額抵押就是抵押品的價值要超過借出的金額，在 web3 中當抵押品的價值低於某個與借出金額相關的比例後就會將抵押品拍賣掉以避免借貸平台的損失。 <a class="link"   target="_blank" rel="noopener" href="https://ethglobal.com/showcase/cryptobureau-u1389" >CryptoBureau <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 就是想解決該方式所產生的問題，該方式所造成的低信任度以及比較低的安全問題，還有在這方式下借貸方式比較沒有彈性，第三個則是必須用更高的抵押物去做借貸。 <a class="link"   target="_blank" rel="noopener" href="https://ethglobal.com/showcase/cryptobureau-u1389" >CryptoBureau <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> 是提供一個平台透過零知識證明的方式去證明該借貸人員的信任程度，提供借貸人的信用分數來作為借貸指數的基準，減少對於抵押品的過度需求增加借貸的信任關係。</p>
+<h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/CryptoBureau.png"
+                     
+                ><br>整個平台將會由 CryptoBureau 這個合約所組成，使用者會透過在該平台進行註冊來獲得使用者資訊，並且與 Lenders 以及 Helpers 進行互動。 Lenders 以及 Helpers 將會由 CryptoBureau 的 owner 所指定與該平台進行互動的合約。 Lenders 即為借貸項目，可以從 CryptoBureau 取得使用者的信用分數去作為借貸抵押比例的計算基準， Lenders 也可將與用戶交互的資訊傳入到 CryptoBureau 的合約內進行記錄來影響信用分數的變動。 Helpers 則是負責驗證使用者的信任證明的合約，當 helpers 驗證完該使用者有該信任證明即可向平台進行驗證，平台接收到後會寄而影響到該使用者的信用分數，在此次項目中用到的證明有 worldcoin 的真人證明, 透過 polygonID 的學位證明以及 Sismo 的錢包財富證明，這幾種證明方式將會在後續的文章中詳細介紹。</p>
+<h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a>Component</h2><h3 id="CryptoBureau"><a href="#CryptoBureau" class="headerlink" title="CryptoBureau"></a>CryptoBureau</h3><h3 id="Helpers"><a href="#Helpers" class="headerlink" title="Helpers"></a>Helpers</h3><h3 id="Lenders"><a href="#Lenders" class="headerlink" title="Lenders"></a>Lenders</h3><h2 id="Discuss"><a href="#Discuss" class="headerlink" title="Discuss"></a>Discuss</h2><h3 id="Issue"><a href="#Issue" class="headerlink" title="Issue"></a>Issue</h3><ol>
+<li>超額貸款的方式在 web3 的可行性<br>目前在銀行體系中對於借貸未還款有比較強硬的執行方式，例如法院的強制執行可以直接去凍結某個用戶的資產已達到收回款項的可能性，這使得 web2 銀行體系中出現了多種的超額借貸的方式，例如信貸直接透過信用來借取低利貸款，但在 web3 的世界中目前尚未有一個可以強制執行的方式因此才會在目前的借貸項目中皆會以超額抵押來取代其他方式，透過超額抵押來避免風險的存在，而在這個平台上依舊會存在該問題無法去解決被惡意借款並且不還款的風險。未來可能可以透過智能合約錢包來解決類似的問題，例如將智能合約的錢包內加入強制執行還款的功能，讓該錢包註冊在該平台上時即可有可能產生強制執行的方式，但會衍生出其他問題例如誰來判定是否能強制執行，第三方的判定又會導致中心化的問題，另外也有可能產生無法判斷哪些錢包是否有該功能，如果用 proxy 的方式有可能直接隱藏某個介面的實作方式導致無法判斷當錢包有該介面時是否為真的強制執行的實作。</li>
+<li></li>
+</ol>
+<h3 id="Risk"><a href="#Risk" class="headerlink" title="Risk"></a>Risk</h3><ol>
+<li>使用者偽照資訊<br>使用者向驗證者提供的資訊是偽照的資訊，使用者可以利用別人的第三方證明來驗證自己的帳戶藉此來提高個人的信用分數，例如使用別人的 sismo wallet 來驗證自己的財富狀態，在這個情況下該使用者的驗證資訊會出現極大的偏誤狀態，這需要透過修正每個 Helper 的驗證方式來確保該狀況不會發生。</li>
+<li>lenders 惡意提供錯誤資訊<br>lenders 有可能向平台提交錯誤的使用者交易資訊，例如額外增加某外使用者的交易紀錄數據來幫助使用者增加其信用紀錄，這個問題可能可以透過 oracle 的方式來獲取 lenders 本身在交易時所產生的資訊來進行驗證，避免該情況的出現。</li>
+</ol>
 
         </div>
 
@@ -354,7 +380,15 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/blockchain-zero-knowledge/">#blockchain zero-knowledge</a>&nbsp;
+                        <a href="/tags/blockchain/">#blockchain</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/zero-knowledge/">#zero-knowledge</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/lending-protocol/">#lending protocol</a>&nbsp;
                     </li>
                 
             </ul>
@@ -394,7 +428,7 @@
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">zk-application(2) - CryptoBureau</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduce"><span class="nav-text">Introduce</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduce"><span class="nav-text">Introduce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Architecture"><span class="nav-text">Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Component"><span class="nav-text">Component</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CryptoBureau"><span class="nav-text">CryptoBureau</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Helpers"><span class="nav-text">Helpers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lenders"><span class="nav-text">Lenders</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Discuss"><span class="nav-text">Discuss</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue"><span class="nav-text">Issue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Risk"><span class="nav-text">Risk</span></a></li></ol></li></ol>
 
     </div>
 </div>
