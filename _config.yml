@@ -64,4 +64,4 @@ deploy:
   type: git
   repo: https://github.com/andy78644/andy78644.github.io
   # example, https://github.com/hexojs/hexojs.github.io
-  branch: main
+  branch: gh-pages
